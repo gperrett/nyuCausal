@@ -4,14 +4,14 @@
 \alias{hw6_3.5.a}
 \title{submit answer to homework 6 question 3.5 part a}
 \usage{
-hw6_3.5.a(est = NULL, lower.ci = NULL, upper.ci = NULL)
+hw6_3.5.a(est = NULL, lower_ci = NULL, upper_ci = NULL)
 }
 \arguments{
 \item{est}{a numeric value representing the estimated SATE at the cut-point from an rdrobust analysis}
 
-\item{lower.ci}{a numeric value representing the lower 95% CI from a rdrobust analysis}
+\item{lower_ci}{a numeric value representing the lower 95 percent confidence interval from a rdrobust analysis}
 
-\item{upper.ci}{a numeric value representing the upper 95% CI from a rdrobust analysis}
+\item{upper_ci}{a numeric value representing the upper 95 percent confidence interval from a rdrobust analysis}
 }
 \description{
 submit answer to homework 6 question 3.5 part a
@@ -24,8 +24,7 @@ submit answer to homework 6 question 3.5 part a
 # Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
 
 # format answer to question 3.5 part a like:
-hw6_3.5.a(est = 5.00, lower.ci = 3.46, upper.ci = 5.98)
+hw6_3.5.a(est = 5.00, lower_ci = 3.46, upper_ci = 5.98)
 
 }
-
 }

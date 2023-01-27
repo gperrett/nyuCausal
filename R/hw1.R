@@ -15,9 +15,9 @@
 #'
 #' }
 #'
-hw1_1.1 <- function(answer = c(NULL, 'A', 'B', 'C')){
+hw1_1.1 <- function(answer = NULL){
   if (!is.null(answer)) {
-    if (answer %notin% c('A', 'B', 'C'))
+    if (answer %notin% c('A', 'B', 'C')) {
       stop(
         paste0(
           "Acceptibele answers are: 'A', 'B' or 'C'.\n  You submitted '",
@@ -25,18 +25,26 @@ hw1_1.1 <- function(answer = c(NULL, 'A', 'B', 'C')){
           "' which is not an option.\n  Please correct prior to submitting."
         )
       )
-    if (!is.character(answer))
+    }
+    if (!is.character(answer)) {
       stop(paste(
         'answer should be a character/string your answer is a',
         class(answer)
       ))
-    if (length(answer) > 1)
+    }
+    if (length(answer) > 1) {
       stop(paste(
         "answer should only have a length of 1, your answer has a length of:",
         length(answer)
       ))
-    if (nchar(answer) > 1)
+    }
+    if (nchar(answer) > 1) {
       stop('answer should be a single letter, your submission has more than one character')
+    }
+
+    cat('Currenly, your answer for question 1.1 is:', answer)
+  }else{
+    warning("Question 1.1 has not been answered yet.\nPossible answers are 'A' 'B' or 'C'")
   }
 
   hw1_answer_1.1 <<- answer
@@ -62,12 +70,15 @@ hw1_1.1 <- function(answer = c(NULL, 'A', 'B', 'C')){
 #' hw1_1.2.a(answer = 'B')
 #'
 #' }
-hw1_1.2.a <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
+hw1_1.2.a <- function(answer = NULL){
   if(!is.null(answer)){
     if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'B'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
     if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
+    cat('Currently, your answer to 1.2 part a is:', answer)
+  }else{
+    warning("Question 1.2 part a has not been answered yet.\nPossible answers are 'A' 'B' 'C' or 'D'")
   }
 
   hw1_answer_1.2.a <<- answer
@@ -94,12 +105,16 @@ hw1_1.2.a <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
 #' hw1_1.2.b(answer = 'B')
 #'
 #' }
-hw1_1.2.b <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
+hw1_1.2.b <- function(answer = NULL){
   if(!is.null(answer)){
     if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'B'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
     if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
+    cat('Currently, your answer to 1.2 part b is:', answer)
+  }else{
+    warning("Question 1.2 part b has not been answered yet.\nPossible answers are 'A' 'B' 'C' or 'D'")
+
   }
 
   hw1_answer_1.2.b <<- answer
@@ -125,12 +140,16 @@ hw1_1.2.b <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
 #' hw1_1.2.c(answer = 'B')
 #'
 #' }
-hw1_1.2.c <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
+hw1_1.2.c <- function(answer = NULL){
   if(!is.null(answer)){
     if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'B'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
     if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
+    cat('Currenly, your answer for question 1.2 part c is:', answer)
+  }else{
+    warning("Question 1.2 part c has not been answered yet.\nPossible answers are 'A' 'B' 'C' or 'D'")
+
   }
 
   hw1_answer_1.2.c <<- answer
@@ -163,10 +182,13 @@ hw1_1.2.c <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
 #'
 #' }
 
-hw1_1.5.a <- function(answer = c(NULL, TRUE, FALSE)){
+hw1_1.5.a <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currenly, your answer for question 1.5 part a is:', answer)
+  }else{
+    warning("Question 1.5 part a has not been answered yet.\nPossible answers are TRUE or FALSE")
   }
 
   hw1_answer_1.5.a <<- answer
@@ -197,10 +219,13 @@ hw1_1.5.a <- function(answer = c(NULL, TRUE, FALSE)){
 #'
 #' }
 
-hw1_1.5.b <- function(answer = c(NULL, TRUE, FALSE)){
+hw1_1.5.b <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currenly, your answer for question 1.5 part b is:', answer)
+  }else{
+    warning("Question 1.5 part b has not been answered yet.\nPossible answers are TRUE or FALSE")
   }
 
   hw1_answer_1.5.b <<- answer
@@ -231,10 +256,14 @@ hw1_1.5.b <- function(answer = c(NULL, TRUE, FALSE)){
 #'
 #' }
 
-hw1_1.5.c <- function(answer = c(NULL, TRUE, FALSE)){
+hw1_1.5.c <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currenly, your answer for question 1.5 part c is:', answer)
+  }else{
+    warning("Question 1.5 part c has not been answered yet.\nPossible answers are TRUE or FALSE")
+
   }
 
   hw1_answer_1.5.c <<- answer
@@ -259,12 +288,15 @@ hw1_1.5.c <- function(answer = c(NULL, TRUE, FALSE)){
 #' hw1_2.2(answer = 'B')
 #'
 #' }
-hw1_2.2 <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
+hw1_2.2 <- function(answer = NULL){
   if(!is.null(answer)){
     if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
     if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
+    cat('Currenly, your answer for question 2.2 is:', answer)
+  }else{
+    warning("Question 2.2 has not been answered yet.\nPossible answers are 'A' 'B' 'C' or 'D'")
 
   }
 
@@ -290,12 +322,15 @@ hw1_2.2 <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
 #' hw1_2.3(answer = 'B')
 #'
 #' }
-hw1_2.3 <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
+hw1_2.3 <- function(answer = NULL){
   if(!is.null(answer)){
     if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
     if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
+    cat('Currenly, your answer for question 2.3 is:', answer)
+  }else{
+    warning("Question 2.3 has not been answered yet.\nPossible answers are 'A' 'B' 'C' or 'D'")
   }
 
   hw1_answer_2.3 <<- answer
@@ -320,11 +355,16 @@ hw1_2.3 <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
 #' hw1_2.4(answer = 'B')
 #'
 #' }
-hw1_2.4 <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
-  if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
-  if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
-  if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
-  if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
+hw1_2.4 <- function(answer = NULL){
+  if(!is.null(answer)){
+    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+    if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
+    if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
+    if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
+    cat('Currenly, your answer for question 2.4 is:', answer)
+  }else{
+    warning("Question 2.4 has not been answered yet.\nPossible answers are 'A' 'B' 'C' or 'D'")
+  }
 
   hw1_answer_2.4 <<- answer
 }
@@ -346,9 +386,14 @@ hw1_2.4 <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
 #' hw1_3.3(answer = TRUE)
 #'
 #' }
-hw1_3.3 <- function(answer = c(NULL, TRUE, FALSE)){
-  if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
-
+hw1_3.3 <- function(answer = NULL){
+  if(!is.null(answer)){
+    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
+    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currenly, your answer for question 3.3 is:', answer)
+  }else{
+    warning("Question 3.3 has not been answered yet.\nPossible answers are TRUE or FALSE")
+  }
   hw1_answer_3.3 <<- answer
 }
 

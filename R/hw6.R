@@ -477,8 +477,8 @@ hw6_3.4.c <- function(est, se){
 #' submit answer to homework 6 question 3.5 part a
 #'
 #' @param est a numeric value representing the estimated SATE at the cut-point from an rdrobust analysis
-#' @param lower.ci a numeric value representing the lower 95% CI from a rdrobust analysis
-#' @param upper.ci a numeric value representing the upper 95% CI from a rdrobust analysis
+#' @param lower_ci a numeric value representing the lower 95 percent confidence interval from a rdrobust analysis
+#' @param upper_ci a numeric value representing the upper 95 percent confidence interval from a rdrobust analysis
 #'
 #' @export
 #'
@@ -490,39 +490,39 @@ hw6_3.4.c <- function(est, se){
 #' # Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
 #'
 #' # format answer to question 3.5 part a like:
-#' hw6_3.5.a(est = 5.00, lower.ci = 3.46, upper.ci = 5.98)
+#' hw6_3.5.a(est = 5.00, lower_ci = 3.46, upper_ci = 5.98)
 #'
 #' }
-#'
-hw6_3.5.a <- function(est = NULL, lower.ci = NULL, upper.ci = NULL){
+
+hw6_3.5.a <- function(est = NULL, lower_ci = NULL, upper_ci = NULL){
   if(!is.null(est)){
     if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(length(est) > 1) stop('est should be a single value, it appears you have submitted an object with length > 1')
+    if(!is.vector(est)) stop('est should be length one vector do not submit a data.frame, tibble  or other object')
   }
 
-  if(!is.null(lower.ci)){
-    if(!is.numeric(lower.ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(lower.ci)))
-    if(length(lower.ci) > 1) stop(paste('lower.ci should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(lower.ci)) stop(paste('lower.ci should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(!is.null(lower_ci)){
+    if(!is.numeric(lower_ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(lower_ci)))
+    if(length(lower_ci) > 1) stop('lower.ci should be a single value, it appears you have submitted an object with length > 1')
+    if(!is.vector(lower_ci)) stop('lower.ci should be length one vector do not submit a data.frame, tibble  or other object')
   }
 
-  if(!is.null(upper.ci)){
-    if(!is.numeric(upper.ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(upper.ci)))
-    if(length(upper.ci) > 1) stop(paste('lower.ci should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(upper.ci)) stop(paste('lower.ci should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(!is.null(upper_ci)){
+    if(!is.numeric(upper_ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(upper.ci)))
+    if(length(upper_ci) > 1) stop('lower.ci should be a single value, it appears you have submitted an object with length > 1')
+    if(!is.vector(upper_ci)) stop('lower.ci should be length one vector do not submit a data.frame, tibble  or other object')
   }
 
 
-  answer_hw6_3.5.a <<- c(est, lower.ci, upper.ci)
+  answer_hw6_3.5.a <<- c(est, lower_ci, upper_ci)
 }
 
 
 #' submit answer to homework 6 question 3.5 part b
 #'
 #' @param est a numeric value representing the estimated SATE at the cut-point from an rdrobust analysis
-#' @param lower.ci a numeric value representing the lower 95% CI from a rdrobust analysis
-#' @param upper.ci a numeric value representing the upper 95% CI from a rdrobust analysis
+#' @param lower_ci a numeric value representing the lower 95 percent confidence interval CI from a rdrobust analysis
+#' @param upper_ci a numeric value representing the upper 95 percent confidence interval CI from a rdrobust analysis
 #'
 #' @export
 #'
@@ -534,31 +534,31 @@ hw6_3.5.a <- function(est = NULL, lower.ci = NULL, upper.ci = NULL){
 #' # Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
 #'
 #' # format answer to question 3.5 part b like:
-#' hw6_3.5.b(est = 5.00, lower.ci = 3.46, upper.ci = 5.98)
+#' hw6_3.5.b(est = 5.00, lower_ci = 3.46, upper_ci = 5.98)
 #'
 #' }
-#'
-hw6_3.5.b <- function(est = NULL, lower.ci = NULL, upper.ci = NULL){
+
+hw6_3.5.b <- function(est = NULL, lower_ci = NULL, upper_ci = NULL){
   if(!is.null(est)){
     if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(length(est) > 1) stop('est should be a single value, it appears you have submitted an object with length > 1')
+    if(!is.vector(est)) stop('est should be length one vector do not submit a data.frame, tibble  or other object')
   }
 
-  if(!is.null(lower.ci)){
-    if(!is.numeric(lower.ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(lower.ci)))
-    if(length(lower.ci) > 1) stop(paste('lower.ci should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(lower.ci)) stop(paste('lower.ci should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(!is.null(lower_ci)){
+    if(!is.numeric(lower_ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(lower_ci)))
+    if(length(lower_ci) > 1) stop('lower.ci should be a single value, it appears you have submitted an object with length > 1')
+    if(!is.vector(lower_ci)) stop('lower.ci should be length one vector do not submit a data.frame, tibble  or other object')
   }
 
-  if(!is.null(upper.ci)){
-    if(!is.numeric(upper.ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(upper.ci)))
-    if(length(upper.ci) > 1) stop(paste('lower.ci should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(upper.ci)) stop(paste('lower.ci should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(!is.null(upper_ci)){
+    if(!is.numeric(upper_ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(upper_ci)))
+    if(length(upper_ci) > 1) stop('lower.ci should be a single value, it appears you have submitted an object with length > 1')
+    if(!is.vector(upper_ci)) stop('lower.ci should be length one vector do not submit a data.frame, tibble  or other object')
   }
 
 
-  answer_hw6_3.5.b <<- c(est, lower.ci, upper.ci)
+  answer_hw6_3.5.b <<- c(est, lower_ci, upper_ci)
 }
 
 #' submit answer to homework 6 question 3.6

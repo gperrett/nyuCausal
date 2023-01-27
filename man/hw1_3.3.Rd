@@ -4,7 +4,7 @@
 \alias{hw1_3.3}
 \title{submit answer to homework 1 question 3.3}
 \usage{
-hw1_3.3(answer = c(NULL, TRUE, FALSE))
+hw1_3.3(answer = NULL)
 }
 \arguments{
 \item{answer}{a logical (TRUE/FALSE) indicating if the statement made in question 3.3 is TRUE or FALSE}
