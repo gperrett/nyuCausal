@@ -19,7 +19,7 @@ submit answer to homework 6 question 3.3 part c
 
 
 # Question 3.3 part c
-Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+# Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 
 # format answer to question 3.1 part a like:
 hw6_3.3.c(est = 5.00, se = .46)

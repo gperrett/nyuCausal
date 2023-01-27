@@ -48,7 +48,7 @@ hw6_2.1 <- function(answer = NULL){
 #'
 #'
 #' # Question 3.1 part a
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.1 part a like:
 #' hw6_3.1.a(est = 5.00, se = .46)
@@ -97,7 +97,7 @@ hw6_3.1.a <- function(est = NULL, se = NULL){
 #'
 #'
 #' # Question 3.1 part b
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.1 part c like:
 #' hw6_3.1.b(est = 5.00, se = .46)
@@ -132,7 +132,7 @@ hw6_3.1.b <- function(est, se){
 #'
 #'
 #' # Question 3.1 part c
-#' Lets assume the estimate at the cutoff is 4.99 with c standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with c standard error of .45869
 #'
 #' # format answer to question 3.1 part c like:
 #' hw6_3.1.c(est = 5.00, se = .46)
@@ -167,7 +167,7 @@ hw6_3.1.c <- function(est, se){
 #'
 #'
 #' # Question 3.2 part a
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.2 part a like:
 #' hw6_3.2.a(est = 5.00, se = .46)
@@ -202,7 +202,7 @@ hw6_3.2.a <- function(est, se){
 #'
 #'
 #' # Question 3.2 part b
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.2 part b like:
 #' hw6_3.2.b(est = 5.00, se = .46)
@@ -237,7 +237,7 @@ hw6_3.2.b <- function(est, se){
 #'
 #'
 #' # Question 3.2 part c
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.2 part c like:
 #' hw6_3.2.c(est = 5.00, se = .46)
@@ -273,7 +273,7 @@ hw6_3.2.c <- function(est, se){
 #'
 #'
 #' # Question 3.3 part a
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.1 part a like:
 #' hw6_3.3.a(est = 5.00, se = .46)
@@ -308,7 +308,7 @@ hw6_3.3.a <- function(est, se){
 #'
 #'
 #' # Question 3.3 part b
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.3 part b like:
 #' hw6_3.3.b(est = 5.00, se = .46)
@@ -343,7 +343,7 @@ hw6_3.3.b <- function(est, se){
 #'
 #'
 #' # Question 3.3 part c
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.1 part a like:
 #' hw6_3.3.c(est = 5.00, se = .46)
@@ -379,7 +379,7 @@ hw6_3.3.c <- function(est, se){
 #'
 #'
 #' # Question 3.4 part a
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.1 part a like:
 #' hw6_3.4.a(est = 5.00, se = .46)
@@ -415,7 +415,7 @@ hw6_3.4.a <- function(est, se){
 #'
 #'
 #' # Question 3.4 part b
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.4 part b like:
 #' hw6_3.4.b(est = 5.00, se = .46)
@@ -450,7 +450,7 @@ hw6_3.4.b <- function(est, se){
 #'
 #'
 #' # Question 3.4 part c
-#' Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
+#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
 #'
 #' # format answer to question 3.4 part c like:
 #' hw6_3.4.c(est = 5.00, se = .46)
@@ -487,14 +487,14 @@ hw6_3.4.c <- function(est, se){
 #'
 #'
 #' # Question 3.5 part a
-#' Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
+#' # Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
 #'
-#' # format answer to question 3.t part a like:
+#' # format answer to question 3.5 part a like:
 #' hw6_3.5.a(est = 5.00, lower.ci = 3.46, upper.ci = 5.98)
 #'
 #' }
 #'
-hw6_3.5.a <- function(est, lower.ci, upper.ci){
+hw6_3.5.a <- function(est = NULL, lower.ci = NULL, upper.ci = NULL){
   if(!is.null(est)){
     if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
     if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
@@ -531,7 +531,7 @@ hw6_3.5.a <- function(est, lower.ci, upper.ci){
 #'
 #'
 #' # Question 3.5 part b
-#' Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
+#' # Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
 #'
 #' # format answer to question 3.5 part b like:
 #' hw6_3.5.b(est = 5.00, lower.ci = 3.46, upper.ci = 5.98)

@@ -21,7 +21,7 @@ submit answer to homework 6 question 3.5 part b
 
 
 # Question 3.5 part b
-Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
+# Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
 
 # format answer to question 3.5 part b like:
 hw6_3.5.b(est = 5.00, lower.ci = 3.46, upper.ci = 5.98)
