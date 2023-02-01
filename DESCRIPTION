@@ -1,7 +1,7 @@
 Package: nyuCausal
 Type: Package
 Title: Homework assignments for NYU causal inference 
-Version: 0.1.0
+Version: 0.1.1
 Author: George Perrett
 Maintainer: George Perrett<gp77@nyu.edu>
 Description: You will use this package to help submit answers to causal inference homeworks on the computational track.
