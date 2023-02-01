@@ -4,7 +4,7 @@
 \alias{hw2_3.2}
 \title{submit answer to homework 2 question 3.2}
 \usage{
-hw2_3.2(answer = c(NULL, "A", "B", "C", "D"))
+hw2_3.2(answer = NULL)
 }
 \arguments{
 \item{answer}{a character string that is letter 'A' 'B' 'C' or 'D'. For answer, enter the letter corresponding to the correct statement in question 3.2}

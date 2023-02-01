@@ -4,7 +4,7 @@
 \alias{hw2_4.2.c}
 \title{submit answer to homework 2 question 4.2 part a}
 \usage{
-hw2_4.2.c(answer = c(NULL, TRUE, FALSE))
+hw2_4.2.c(answer = NULL)
 }
 \arguments{
 \item{answer}{a logical that is either TRUE or FALSE.}
