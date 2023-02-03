@@ -5,7 +5,7 @@
 \alias{physics}
 \title{physics dataset}
 \format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 800 rows and 4 columns.
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 500 rows and 5 columns.
 }
 \usage{
 physics
