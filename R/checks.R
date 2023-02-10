@@ -2,7 +2,12 @@
 #'
 #' @export
 #' @import testthat
+#' @examples
+#' \donttest{
+#' # After writing all your code and completing all answers run:
+#' run_checks_hw2()
 #'
+#' }
 run_checks_hw2 <- function(){
 
   tryCatch({
