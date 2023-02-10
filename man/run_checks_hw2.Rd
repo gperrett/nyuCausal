@@ -9,3 +9,10 @@ run_checks_hw2()
 \description{
 Run checks on HW submissions
 }
+\examples{
+\donttest{
+# After writing all your code and completing all answers run:
+run_checks_hw2()
+
+}
+}
