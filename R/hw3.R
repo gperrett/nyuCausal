@@ -516,7 +516,7 @@ hw3_3.2 <- function(answer = NULL){
 #' example <- data.frame(y, x, z)
 #' fit <- lm(y ~ x + z, data = example)
 #' # report rounded estimate and standard error
-#' hw3_4.1(est = round(fit$coef[3], 2), se = round(sqrt(diag(vcov(fit)))[3], 2))
+#' hw3_4.1(est = round(fit$coef['z'], 2), se = round(sqrt(diag(vcov(fit)))['z'], 2))
 #'
 #' }
 #'
