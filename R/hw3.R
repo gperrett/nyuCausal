@@ -551,29 +551,20 @@ hw3_4.1 <- function(est = NULL, se = NULL){
 
 #' submit answer to homework 3 question 4.2
 #'
-#' @param answer a logical that is TRUE or FALSE
+#' @param answer a chatacter that is either 'A' or 'B'
 #'
 #' @export
 #'
 #' @examples
 #' \donttest{
 #'
-#' # Question 4.2
-#' # TRUE or FALSE:
-#' # A statement that is true.
-#'
-#' # format answer to question 4.2 part bc like:
-#' hw3_4.2(answer = TRUE)
 #'
 #' # Question 4.2
-#' # TRUE or FALSE:
 #' # A: the right answer.
 #' # B: the wrong answer.
 #'
-#'
-#'
 #' # format answer to question 4.2 like:
-#' hw3_4.2(answer = 'B')
+#' #hw3_4.2(answer = 'B')
 #'
 #' }
 hw3_4.2 <- function(answer = NULL){

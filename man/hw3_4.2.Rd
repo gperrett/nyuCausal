@@ -7,7 +7,7 @@
 hw3_4.2(answer = NULL)
 }
 \arguments{
-\item{answer}{a logical that is TRUE or FALSE}
+\item{answer}{a chatacter that is either 'A' or 'B'}
 }
 \description{
 submit answer to homework 3 question 4.2
@@ -15,19 +15,13 @@ submit answer to homework 3 question 4.2
 \examples{
 \donttest{
 
-# Question 4.2
-# TRUE or FALSE:
-# A statement that is true.
-
-# format answer to question 4.2 part bc like:
-hw3_4.2(answer = TRUE)
 
 # Question 4.2
-# TRUE or FALSE:
-# A statement that is false.
+# A: the right answer.
+# B: the wrong answer.
 
 # format answer to question 4.2 like:
-hw3_4.2(answer = FALSE)
+#hw3_4.2(answer = 'B')
 
 }
 }
