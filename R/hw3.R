@@ -567,10 +567,13 @@ hw3_4.1 <- function(est = NULL, se = NULL){
 #'
 #' # Question 4.2
 #' # TRUE or FALSE:
-#' # A statement that is false.
+#' # A: the right answer.
+#' # B: the wrong answer.
+#'
+#'
 #'
 #' # format answer to question 4.2 like:
-#' hw3_4.2(answer = FALSE)
+#' hw3_4.2(answer = 'B')
 #'
 #' }
 hw3_4.2 <- function(answer = NULL){
