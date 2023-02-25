@@ -575,12 +575,15 @@ hw3_4.1 <- function(est = NULL, se = NULL){
 #' }
 hw3_4.2 <- function(answer = NULL){
   if(!is.null(answer)){
-    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer),'\n  For help run ?hw3_4.2() in R'))
-    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer),'\n  For help run ?hw3_4.2() in R'))
-    cat('Currently your answer for queston 4.2 is: ', answer)
+    if(answer %notin% c('A', 'B')) stop(paste0("Acceptibele answers are: 'A' or 'B'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+    if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
+    if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
+    if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
+    cat('Currenly, your answer for question 4.2 is:', answer)
   }else{
-    warning('Question 4.2 has not been answered yet.\nPossible answers are TRUE or FALSE')
+    warning("Question 4.2 has not been answered yet.\nPossible answers are 'A' or 'B")
   }
-  answer_hw3_4.2 <<- answer
+
+  answer4.2 <<- answer
 }
 

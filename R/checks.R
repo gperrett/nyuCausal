@@ -13,7 +13,7 @@ run_checks_hw3 <- function(){
   tryCatch({
     testthat::test_that('dat3_1 should be a data.frame or tibble with names: p, X, Z, Y0, Y1, Y\nSee question 1.1', {
       testthat::expect_true(is.data.frame(dat3_1))
-      testthat::expect_named(dat2, expected = c('p','X', 'Z','Y0', 'Y1', 'Y'), ignore.order = TRUE, ignore.case = FALSE)
+      testthat::expect_named(dat3_1, expected = c('p','X', 'Z','Y0', 'Y1', 'Y'), ignore.order = TRUE, ignore.case = FALSE)
     })
     },
     error = function(e) {
