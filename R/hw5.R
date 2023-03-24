@@ -48,7 +48,7 @@ hw5_1.1 <- function(CACE = NULL){
 #' }
 #'
 hw5_1.2.a <- function(SATE = NULL){
-  if(is.null(SATE)){
+  if(!is.null(SATE)){
     if(!is.numeric(SATE)) stop(paste('SATE for never takers should be a numeric value you have submitted a:', class(SATE)))
     if(length(SATE) > 1) stop(paste('SATE for never takers should be a single value, it appears you have submitted an object with length > 1'))
     if(!is.vector(SATE)) stop(paste('SATE for never takers should be length one vector do not submit a data.frame, tibble  or other object'))
@@ -79,7 +79,7 @@ hw5_1.2.a <- function(SATE = NULL){
 #' }
 #'
 hw5_1.2.b <- function(SATE = NULL){
-  if(is.null(SATE)){
+  if(!is.null(SATE)){
     if(!is.numeric(SATE)) stop(paste('SATE for never takers should be a numeric value you have submitted a:', class(SATE)))
     if(length(SATE) > 1) stop(paste('SATE for never takers should be a single value, it appears you have submitted an object with length > 1'))
     if(!is.vector(SATE)) stop(paste('SATE for never takers should be length one vector do not submit a data.frame, tibble  or other object'))
