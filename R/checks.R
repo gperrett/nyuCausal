@@ -16,7 +16,7 @@ run_checks_hw5 <- function(){
   tryCatch({
     testthat::test_that('dat.full should be a data.frame or tibble with names: C, Z, D0, D1, Y0, Y1, D and Y\nSee question 1.0', {
       testthat::expect_true(is.data.frame(dat.full))
-      testthat::expect_named(dat3_1, expected = c('C','Z', 'D0','D1','Y0', 'Y1', 'D', 'Y'), ignore.order = TRUE, ignore.case = FALSE)
+      testthat::expect_named(dat.full, expected = c('C','Z', 'D0','D1','Y0', 'Y1', 'D', 'Y'), ignore.order = TRUE, ignore.case = FALSE)
     })
   },
   error = function(e) {
