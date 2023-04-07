@@ -13,3 +13,16 @@
 #'
 #'
 "sesame"
+
+#' college dataset
+#'
+#'
+"college"
+
+
+#' elections dataset
+#'
+#'
+"elections"
+
+

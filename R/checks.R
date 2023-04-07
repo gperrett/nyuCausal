@@ -1,3 +1,35 @@
+#' Run homework checks for homework 6
+#' @export
+#' @import testthat
+#' @examples
+#' \donttest{
+#' # After writing all your code and completing all answers run:
+#' run_checks_hw6()
+#'
+#' }
+#'
+run_checks_hw6 <- function(){
+  tryCatch({
+    testthat::test_that('worldA should be a data.frame or tibble with names: y1, y0, y, income, eligable', {
+      testthat::expect_true(is.data.frame(worldA))
+      testthat::expect_named(worldA, expected = c('y1','y0', 'y','income','eligable'), ignore.order = TRUE, ignore.case = FALSE)
+    })
+  },
+  error = function(e) {
+    e <- TRUE
+  })
+
+  tryCatch({
+    testthat::test_that('worldB should be a data.frame or tibble with names: y1, y0, y, income, eligable', {
+      testthat::expect_true(is.data.frame(worldB))
+      testthat::expect_named(worldB, expected = c('y1','y0', 'y','income','eligable'), ignore.order = TRUE, ignore.case = FALSE)
+    })
+  },
+  error = function(e) {
+    e <- TRUE
+  })
+
+}
 
 #' Run homework checks for homework 5
 #' @export

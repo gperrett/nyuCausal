@@ -7,26 +7,28 @@
 hw6_4.1(answer = NULL)
 }
 \arguments{
-\item{answer}{a character string that is letter 'A' 'B' 'C' 'D' 'E' or 'F'.}
-}
-\value{
-summary of your current answer for question 4.1
+\item{answer}{a logical that is TRUE or FALSE}
 }
 \description{
 submit answer to homework 6 question 4.1
 }
 \examples{
 \donttest{
-# These are made up and not related to actual answers
-# A: A wrong answer
-# B: The correct answer
-# C: A different  wrong answer
-# D: Another different wrong answer
-# E: Yet another wrong answer
-# F: A novel wrong answer
 
-# format answer to 3.6 like:
-hw6_4.1(answer = 'B')
+# Question 4.1
+# TRUE or FALSE:
+# A statement that is true.
+
+# format answer to question 4.1 like:
+hw6_4.1(answer = TRUE)
+
+# Question 4.1
+# TRUE or FALSE:
+# A statement that is false.
+
+# format answer to question 4.1 like:
+hw6_4.1(answer = FALSE)
 
 }
+
 }

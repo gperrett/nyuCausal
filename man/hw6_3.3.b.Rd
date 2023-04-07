@@ -14,16 +14,3 @@ hw6_3.3.b(est, se)
 \description{
 submit answer to homework 6 question 3.3 part b
 }
-\examples{
-\donttest{
-
-
-# Question 3.3 part b
-# Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-
-# format answer to question 3.3 part b like:
-hw6_3.3.b(est = 5.00, se = .46)
-
-}
-
-}

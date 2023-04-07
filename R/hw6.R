@@ -1,61 +1,13 @@
-#' submit answer to homework 6 question 2.1
-#'
-#' @param answer a logical that is TRUE or FALSE
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#' # Question 2.1
-#' # TRUE or FALSE:
-#' # A statement that is true.
-#'
-#' # format answer to question 2.1 like:
-#' hw6_2.1(answer = TRUE)
-#'
-#' # Question 2.1
-#' # TRUE or FALSE:
-#' # A statement that is false.
-#'
-#' # format answer to question 2.1 like:
-#' hw6_2.1(answer = FALSE)
-#'
-#' }
-#'
-
-hw6_2.1 <- function(answer = NULL){
-  if(!is.null(answer)){
-    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
-    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 2.1 is: ', answer)
-  }else{
-    warning('Question 2.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
-  }
-  answer_hw6_2.1 <<- answer
-}
-
-
-#' submit answer to homework 6 question 3.1 part a
+#' submit answer to homework 6 question 2.2 part a
 #'
 #' @param est the estimated SATE at the cut-point
 #' @param se the standard error of the estimated SATE at the cut-point
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.1 part a
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.1 part a like:
-#' hw6_3.1.a(est = 5.00, se = .46)
-#'
-#' }
-#'
-hw6_3.1.a <- function(est = NULL, se = NULL){
+
+hw6_2.2.a <- function(est, se){
   if(!is.null(est)){
     if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
     if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
@@ -66,94 +18,222 @@ hw6_3.1.a <- function(est = NULL, se = NULL){
   }
 
   if(is.null(est) & is.null(se)){
-    warning('Question 3.1 part a has not been answered yet.\nReport an estimate of the SATE at the cutoff to `est`.\nReport the standard error of that estimate to `se`')
+    warning('Question 2.2 part a has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
   }
 
   if(!is.null(est) & is.null(se)){
-    warning(paste('Question 3.1 part a has been partially answered.\nCurrently you have reported', est, ' for the estimate of the SATE at the cutoff.\n However, you have not reported the standard error to `se`'))
+    warning(paste('Question 2.2 part a has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
   }
 
   if(is.null(est) & !is.null(se)){
-    warning(paste('Question 3.1 part a has been partially answered.\nCurrently you have not reported an estimate of the SATE at the cutoff.\n You have reported a standard error of:', se))
+    warning(paste('Question 2.2 part a has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
   }
 
   if(!is.null(est) & !is.null(se)){
-    cat('Currently your answer to 3.1 part a is that estimated SATE at the cut-point is:', est, ' with a standard error of:', se)
+    cat('Currently your answer to 2.2 part a is an estimate of:', est, ' with a standard error of:', se)
   }
 
-  answer_hw6_3.1.a <<- c(est, se)
-
+  answer_hw6_2.2.a <<- c(est, se)
 }
 
-#' submit answer to homework 6 question 3.1 part b
+#' submit answer to homework 6 question 2.2 part b
 #'
 #' @param est the estimated SATE at the cut-point
 #' @param se the standard error of the estimated SATE at the cut-point
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.1 part b
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.1 part c like:
-#' hw6_3.1.b(est = 5.00, se = .46)
-#'
-#' }
-#'
-hw6_3.1.b <- function(est, se){
+
+hw6_2.2.b <- function(est, se){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
   }
-
   if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
   }
 
-  answer_hw6_3.1.b <<- c(est, se)
+  if(is.null(est) & is.null(se)){
+    warning('Question 2.2 part b has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 2.2 part b has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 2.2 part b has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 2.2 part b is an estimate of:', est, ' with a standard error of:', se)
+  }
+
+  answer_hw6_2.2.b <<- c(est, se)
 }
 
-#' submit answer to homework 6 question 3.1 part c
+
+
+#' submit answer to homework 6 question 2.2 part c
 #'
 #' @param est the estimated SATE at the cut-point
 #' @param se the standard error of the estimated SATE at the cut-point
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.1 part c
-#' # Lets assume the estimate at the cutoff is 4.99 with c standard error of .45869
-#'
-#' # format answer to question 3.1 part c like:
-#' hw6_3.1.c(est = 5.00, se = .46)
-#'
-#' }
-#'
-hw6_3.1.c <- function(est, se){
+
+hw6_2.2.c <- function(est, se){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
   }
-
   if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
   }
 
-  answer_hw6_3.1.c <<- c(est, se)
+  if(is.null(est) & is.null(se)){
+    warning('Question 2.2 part c has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 2.2 part c has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 2.2 part c has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 2.2 part c is an estimate of:', est, ' with a standard error of:', se)
+  }
+
+  answer_hw6_2.2.c <<- c(est, se)
 }
+
+
+#' submit answer to homework 6 question 2.3 part a
+#'
+#' @param est the estimated SATE at the cut-point
+#' @param se the standard error of the estimated SATE at the cut-point
+#'
+#' @export
+#'
+#'
+
+hw6_2.3.a <- function(est, se){
+  if(!is.null(est)){
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
+  }
+
+  if(is.null(est) & is.null(se)){
+    warning('Question 2.3 part a has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 2.3 part a has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 2.3 part a has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 2.3 part a is an estimate of:', est, ' with a standard error of:', se)
+  }
+
+  answer_hw6_2.3.a <<- c(est, se)
+}
+
+
+
+#' submit answer to homework 6 question 2.3 part b
+#'
+#' @param est the estimated SATE at the cut-point
+#' @param se the standard error of the estimated SATE at the cut-point
+#'
+#' @export
+#'
+#'
+
+hw6_2.3.b <- function(est, se){
+  if(!is.null(est)){
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
+  }
+
+  if(is.null(est) & is.null(se)){
+    warning('Question 2.3 part b has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 2.3 part b has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 2.3 part b has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 2.3 part b is an estimate of:', est, ' with a standard error of:', se)
+  }
+
+  answer_hw6_2.3.b <<- c(est, se)
+}
+
+
+
+#' submit answer to homework 6 question 2.3 part c
+#'
+#' @param est the estimated SATE at the cut-point
+#' @param se the standard error of the estimated SATE at the cut-point
+#'
+#' @export
+#'
+#'
+
+hw6_2.3.c <- function(est, se){
+  if(!is.null(est)){
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
+  }
+
+  if(is.null(est) & is.null(se)){
+    warning('Question 2.3 part c has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 2.3 part c has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 2.3 part c has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 2.3 part c is an estimate of:', est, ' with a standard error of:', se)
+  }
+
+  answer_hw6_2.3.c <<- c(est, se)
+}
+
+
 
 #' submit answer to homework 6 question 3.2 part a
 #'
@@ -162,33 +242,37 @@ hw6_3.1.c <- function(est, se){
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.2 part a
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.2 part a like:
-#' hw6_3.2.a(est = 5.00, se = .46)
-#'
-#' }
-#'
+
 hw6_3.2.a <- function(est, se){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
   }
 
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(is.null(est) & is.null(se)){
+    warning('Question 3.2 part a has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 3.2 part a has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 3.2 part a has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 3.2 part a is an estimate of:', est, ' with a standard error of:', se)
   }
 
   answer_hw6_3.2.a <<- c(est, se)
 }
+
 
 #' submit answer to homework 6 question 3.2 part b
 #'
@@ -197,33 +281,37 @@ hw6_3.2.a <- function(est, se){
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.2 part b
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.2 part b like:
-#' hw6_3.2.b(est = 5.00, se = .46)
-#'
-#' }
-#'
+
 hw6_3.2.b <- function(est, se){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
   }
 
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(is.null(est) & is.null(se)){
+    warning('Question 3.2 part b has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 3.2 part b has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 3.2 part b has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 3.2 part b is an estimate of:', est, ' with a standard error of:', se)
   }
 
   answer_hw6_3.2.b <<- c(est, se)
 }
+
 
 #' submit answer to homework 6 question 3.2 part c
 #'
@@ -232,33 +320,37 @@ hw6_3.2.b <- function(est, se){
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.2 part c
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.2 part c like:
-#' hw6_3.2.c(est = 5.00, se = .46)
-#'
-#' }
-#'
+
 hw6_3.2.c <- function(est, se){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
   }
 
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(is.null(est) & is.null(se)){
+    warning('Question 3.2 part c has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 3.2 part c has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 3.2 part c has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 3.2 part c is an estimate of:', est, ' with a standard error of:', se)
   }
 
   answer_hw6_3.2.c <<- c(est, se)
 }
+
 
 
 #' submit answer to homework 6 question 3.3 part a
@@ -268,33 +360,38 @@ hw6_3.2.c <- function(est, se){
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.3 part a
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.1 part a like:
-#' hw6_3.3.a(est = 5.00, se = .46)
-#'
-#' }
-#'
+
 hw6_3.3.a <- function(est, se){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
   }
 
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(is.null(est) & is.null(se)){
+    warning('Question 3.3 part a has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 3.3 part a has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 3.3 part a has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 3.3 part a is an estimate of:', est, ' with a standard error of:', se)
   }
 
   answer_hw6_3.3.a <<- c(est, se)
 }
+
+
 
 #' submit answer to homework 6 question 3.3 part b
 #'
@@ -303,33 +400,37 @@ hw6_3.3.a <- function(est, se){
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.3 part b
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.3 part b like:
-#' hw6_3.3.b(est = 5.00, se = .46)
-#'
-#' }
-#'
+
 hw6_3.3.b <- function(est, se){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
   }
 
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(is.null(est) & is.null(se)){
+    warning('Question 3.3 part b has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 3.3 part b has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 3.3 part b has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 3.3 part b is an estimate of:', est, ' with a standard error of:', se)
   }
 
   answer_hw6_3.3.b <<- c(est, se)
 }
+
 
 #' submit answer to homework 6 question 3.3 part c
 #'
@@ -338,331 +439,305 @@ hw6_3.3.b <- function(est, se){
 #'
 #' @export
 #'
-#' @examples
-#' \donttest{
 #'
-#'
-#' # Question 3.3 part c
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.1 part a like:
-#' hw6_3.3.c(est = 5.00, se = .46)
-#'
-#' }
-#'
+
 hw6_3.3.c <- function(est, se){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+  if(!is.null(se)){
+    if(!is.numeric(se)) stop(paste('se should be a numeric value, your answer is class:', class(se)))
+    if(length(se) > 1) stop(paste('se should be a single number. Your answer has length:', length(se)))
   }
 
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
+  if(is.null(est) & is.null(se)){
+    warning('Question 3.3 part c has not been answered yet.\nReport an estimate to `est`.\nReport the standard error of that estimate to `se`')
+  }
+
+  if(!is.null(est) & is.null(se)){
+    warning(paste('Question 3.3 part c has been partially answered.\nCurrently you have reported an estimate of', est, '.\n However, you have not reported the standard error `se`'))
+  }
+
+  if(is.null(est) & !is.null(se)){
+    warning(paste('Question 3.3 part c has been partially answered.\nCurrently you have not reported an estimate.\n You have reported the standard error of the estimate:', se))
+  }
+
+  if(!is.null(est) & !is.null(se)){
+    cat('Currently your answer to 3.3 part c is an estimate of:', est, ' with a standard error of:', se)
   }
 
   answer_hw6_3.3.c <<- c(est, se)
 }
 
 
-#' submit answer to homework 6 question 3.4 part a
-#'
-#' @param est the estimated SATE at the cut-point
-#' @param se the standard error of the estimated SATE at the cut-point
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#'
-#' # Question 3.4 part a
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.1 part a like:
-#' hw6_3.4.a(est = 5.00, se = .46)
-#'
-#' }
-#'
-hw6_3.4.a <- function(est, se){
-  if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
-  }
-
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
-  }
-
-  answer_hw6_3.4.a <<- c(est, se)
-}
-
-
-#' submit answer to homework 6 question 3.4 part b
-#'
-#' @param est the estimated SATE at the cut-point
-#' @param se the standard error of the estimated SATE at the cut-point
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#'
-#' # Question 3.4 part b
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.4 part b like:
-#' hw6_3.4.b(est = 5.00, se = .46)
-#'
-#' }
-#'
-hw6_3.4.b <- function(est, se){
-  if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
-  }
-
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
-  }
-
-  answer_hw6_3.4.b <<- c(est, se)
-}
-
-#' submit answer to homework 6 question 3.4 part c
-#'
-#' @param est a numeric value representing the estimated SATE at the cut-point
-#' @param se the standard error of the estimated SATE at the cut-point
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#'
-#' # Question 3.4 part c
-#' # Lets assume the estimate at the cutoff is 4.99 with a standard error of .45869
-#'
-#' # format answer to question 3.4 part c like:
-#' hw6_3.4.c(est = 5.00, se = .46)
-#'
-#' }
-#'
-hw6_3.4.c <- function(est, se){
-  if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
-  }
-
-  if(!is.null(se)){
-    if(!is.numeric(se)) stop(paste('se should be a numeric value you have submitted a:', class(se)))
-    if(length(se) > 1) stop(paste('se should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(se)) stop(paste('se should be length one vector do not submit a data.frame, tibble  or other object'))
-  }
-
-  answer_hw6_3.4.c <<- c(est, se)
-}
-
-
-#' submit answer to homework 6 question 3.5 part a
-#'
-#' @param est a numeric value representing the estimated SATE at the cut-point from an rdrobust analysis
-#' @param lower_ci a numeric value representing the lower 95 percent confidence interval from a rdrobust analysis
-#' @param upper_ci a numeric value representing the upper 95 percent confidence interval from a rdrobust analysis
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#'
-#' # Question 3.5 part a
-#' # Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
-#'
-#' # format answer to question 3.5 part a like:
-#' hw6_3.5.a(est = 5.00, lower_ci = 3.46, upper_ci = 5.98)
-#'
-#' }
-
-hw6_3.5.a <- function(est = NULL, lower_ci = NULL, upper_ci = NULL){
-  if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop('est should be a single value, it appears you have submitted an object with length > 1')
-    if(!is.vector(est)) stop('est should be length one vector do not submit a data.frame, tibble  or other object')
-  }
-
-  if(!is.null(lower_ci)){
-    if(!is.numeric(lower_ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(lower_ci)))
-    if(length(lower_ci) > 1) stop('lower.ci should be a single value, it appears you have submitted an object with length > 1')
-    if(!is.vector(lower_ci)) stop('lower.ci should be length one vector do not submit a data.frame, tibble  or other object')
-  }
-
-  if(!is.null(upper_ci)){
-    if(!is.numeric(upper_ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(upper.ci)))
-    if(length(upper_ci) > 1) stop('lower.ci should be a single value, it appears you have submitted an object with length > 1')
-    if(!is.vector(upper_ci)) stop('lower.ci should be length one vector do not submit a data.frame, tibble  or other object')
-  }
-
-
-  answer_hw6_3.5.a <<- c(est, lower_ci, upper_ci)
-}
-
-
-#' submit answer to homework 6 question 3.5 part b
-#'
-#' @param est a numeric value representing the estimated SATE at the cut-point from an rdrobust analysis
-#' @param lower_ci a numeric value representing the lower 95 percent confidence interval CI from a rdrobust analysis
-#' @param upper_ci a numeric value representing the upper 95 percent confidence interval CI from a rdrobust analysis
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#'
-#' # Question 3.5 part b
-#' # Lets assume the estimate at the cutoff is 4.99 with a lower CI 3.457 and an upper CI of 5.982
-#'
-#' # format answer to question 3.5 part b like:
-#' hw6_3.5.b(est = 5.00, lower_ci = 3.46, upper_ci = 5.98)
-#'
-#' }
-
-hw6_3.5.b <- function(est = NULL, lower_ci = NULL, upper_ci = NULL){
-  if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
-    if(length(est) > 1) stop('est should be a single value, it appears you have submitted an object with length > 1')
-    if(!is.vector(est)) stop('est should be length one vector do not submit a data.frame, tibble  or other object')
-  }
-
-  if(!is.null(lower_ci)){
-    if(!is.numeric(lower_ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(lower_ci)))
-    if(length(lower_ci) > 1) stop('lower.ci should be a single value, it appears you have submitted an object with length > 1')
-    if(!is.vector(lower_ci)) stop('lower.ci should be length one vector do not submit a data.frame, tibble  or other object')
-  }
-
-  if(!is.null(upper_ci)){
-    if(!is.numeric(upper_ci)) stop(paste('lower.ci should be a numeric value you have submitted a:', class(upper_ci)))
-    if(length(upper_ci) > 1) stop('lower.ci should be a single value, it appears you have submitted an object with length > 1')
-    if(!is.vector(upper_ci)) stop('lower.ci should be length one vector do not submit a data.frame, tibble  or other object')
-  }
-
-
-  answer_hw6_3.5.b <<- c(est, lower_ci, upper_ci)
-}
-
-#' submit answer to homework 6 question 3.6
-#'
-#' @param answer a character string that is letter 'A' 'B' 'C' 'D' 'E' or 'F'.
-#'
-#' @return summary of your current answer for question 3.6
-#' @export
-#'
-#' @examples
-#' \donttest{
-#' # These are made up and not related to actual answers
-#' # A: A wrong answer
-#' # B: The correct answer
-#' # C: A different  wrong answer
-#' # D: Another different wrong answer
-#' # E: Yet another wrong answer
-#' # F: A novel wrong answer
-#'
-#' # format answer to 3.6 like:
-#' hw6_3.6(answer = 'B')
-#'
-#' }
-hw6_3.6 <- function(answer = NULL){
-  if (!is.null(answer)) {
-    if (answer %notin% c('A', 'B', 'C', 'D', 'E', 'F')) {
-      stop(
-        paste0(
-          "Acceptibele answers are: 'A', 'B', 'C', 'D', 'E' or 'F'.\n  You submitted '",
-          answer,
-          "' which is not an option.\n  Please correct prior to submitting."
-        )
-      )
-    }
-    if (!is.character(answer)) {
-      stop(paste(
-        'answer should be a character/string your answer is a',
-        class(answer)
-      ))
-    }
-    if (length(answer) > 1) {
-      stop(paste(
-        "answer should only have a length of 1, your answer has a length of:",
-        length(answer)
-      ))
-    }
-    if (nchar(answer) > 1) {
-      stop('answer should be a single letter, your submission has more than one character')
-    }
-  }
-
-  answer_hw6_3.6 <<- answer
-}
-
 #' submit answer to homework 6 question 4.1
 #'
-#' @param answer a character string that is letter 'A' 'B' 'C' 'D' 'E' or 'F'.
+#' @param answer a logical that is TRUE or FALSE
 #'
-#' @return summary of your current answer for question 4.1
 #' @export
 #'
 #' @examples
 #' \donttest{
-#' # These are made up and not related to actual answers
-#' # A: A wrong answer
-#' # B: The correct answer
-#' # C: A different  wrong answer
-#' # D: Another different wrong answer
-#' # E: Yet another wrong answer
-#' # F: A novel wrong answer
 #'
-#' # format answer to 3.6 like:
-#' hw6_4.1(answer = 'B')
+#' # Question 4.1
+#' # TRUE or FALSE:
+#' # A statement that is true.
+#'
+#' # format answer to question 4.1 like:
+#' hw6_4.1(answer = TRUE)
+#'
+#' # Question 4.1
+#' # TRUE or FALSE:
+#' # A statement that is false.
+#'
+#' # format answer to question 4.1 like:
+#' hw6_4.1(answer = FALSE)
 #'
 #' }
+#'
 hw6_4.1 <- function(answer = NULL){
-  if (!is.null(answer)) {
-    if (answer %notin% c('A', 'B', 'C', 'D', 'E', 'F')) {
-      stop(
-        paste0(
-          "Acceptibele answers are: 'A', 'B', 'C', 'D', 'E' or 'F'.\n  You submitted '",
-          answer,
-          "' which is not an option.\n  Please correct prior to submitting."
-        )
-      )
-    }
-    if (!is.character(answer)) {
-      stop(paste(
-        'answer should be a character/string your answer is a',
-        class(answer)
-      ))
-    }
-    if (length(answer) > 1) {
-      stop(paste(
-        "answer should only have a length of 1, your answer has a length of:",
-        length(answer)
-      ))
-    }
-    if (nchar(answer) > 1) {
-      stop('answer should be a single letter, your submission has more than one character')
-    }
+  if(!is.null(answer)){
+    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
+    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currently your answer for queston 4.1 is: ', answer)
+  }else{
+    warning('Question 4.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-
   answer_hw6_4.1 <<- answer
 }
 
 
+#' submit answer to homework 6 question 5.1
+#'
+#' @param answer a logical that is TRUE or FALSE
+#'
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # Question 5.1
+#' # TRUE or FALSE:
+#' # A statement that is true.
+#'
+#' # format answer to question 5.1 like:
+#' hw6_5.1(answer = TRUE)
+#'
+#' # Question 5.1
+#' # TRUE or FALSE:
+#' # A statement that is false.
+#'
+#' # format answer to question 5.1 like:
+#' hw6_5.1(answer = FALSE)
+#'
+#' }
+#'
+hw6_5.1 <- function(answer = NULL){
+  if(!is.null(answer)){
+    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
+    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currently your answer for queston 5.1 is: ', answer)
+  }else{
+    warning('Question 5.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
+  }
+  answer_hw6_5.1 <<- answer
+}
+
+
+#' submit answer to homework 6 question 5.1
+#'
+#' @param answer a logical that is TRUE or FALSE
+#'
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # Question 5.2
+#' # TRUE or FALSE:
+#' # A statement that is true.
+#'
+#' # format answer to question 5.2 like:
+#' hw6_5.2(answer = TRUE)
+#'
+#' # Question 5.2
+#' # TRUE or FALSE:
+#' # A statement that is false.
+#'
+#' # format answer to question 5.2 like:
+#' hw6_5.2(answer = FALSE)
+#'
+#' }
+#'
+
+hw6_5.2 <- function(answer = NULL){
+  if(!is.null(answer)){
+    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
+    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currently your answer for queston 5.2 is: ', answer)
+  }else{
+    warning('Question 5.2 has not been answered yet.\nPossible answers are TRUE or FALSE')
+  }
+  answer_hw6_5.2 <<- answer
+}
+
+
+
+
+#' submit answer to homework 6 question 6.1
+#'
+#' @param answer a logical that is TRUE or FALSE
+#'
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # Question 6.1
+#' # TRUE or FALSE:
+#' # A statement that is true.
+#'
+#' # format answer to question 6.1 like:
+#' hw6_6.1(answer = TRUE)
+#'
+#' # Question 6.1
+#' # TRUE or FALSE:
+#' # A statement that is false.
+#'
+#' # format answer to question 6.1 like:
+#' hw6_6.1(answer = FALSE)
+#'
+#' }
+#'
+hw6_6.1 <- function(answer = NULL){
+  if(!is.null(answer)){
+    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
+    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currently your answer for queston 6.1 is: ', answer)
+  }else{
+    warning('Question 6.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
+  }
+  answer_hw6_6.1 <<- answer
+}
+
+
+
+
+#' submit answer to homework 6 question 6.2
+#'
+#' @param est the estimated SATE at the cut-point#'
+#' @export
+#'
+#'
+
+hw6_6.2 <- function(est){
+  if(!is.null(est)){
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+
+
+  if(!is.null(est)){
+    cat('Currently your answer to 6.2 is:', est)
+  }else{
+    warning('Question 6.2 has not been answered yet.\nPReport an estimate to `est`')
+  }
+
+  answer_hw6_6.2 <<- c(est)
+}
+
+#' submit answer to homework 6 question 7.1
+#'
+#' @param answer a logical that is TRUE or FALSE
+#'
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # Question 7.1
+#' # TRUE or FALSE:
+#' # A statement that is true.
+#'
+#' # format answer to question 7.1 like:
+#' hw6_7.1(answer = TRUE)
+#'
+#' # Question 7.1
+#' # TRUE or FALSE:
+#' # A statement that is false.
+#'
+#' # format answer to question 7.1 like:
+#' hw6_7.1(answer = FALSE)
+#'
+#' }
+#'
+hw6_7.1 <- function(answer = NULL){
+  if(!is.null(answer)){
+    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
+    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currently your answer for queston 7.1 is: ', answer)
+  }else{
+    warning('Question 7.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
+  }
+  answer_hw6_7.1 <<- answer
+}
+
+
+
+#' submit answer to homework 6 question 7.2
+#'
+#' @param est the estimated SATE at the cut-point#'
+#' @export
+#'
+#'
+
+hw6_7.2 <- function(est){
+  if(!is.null(est)){
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, your answer is class:', class(est)))
+    if(length(est) > 1) stop(paste('est should be a single number. Your answer has length:', length(answer)))
+  }
+
+
+  if(!is.null(est)){
+    cat('Currently your answer to 7.2 is:', est)
+  }else{
+    warning('Question 7.2 has not been answered yet.\nPReport an estimate to `est`')
+  }
+
+  answer_hw6_7.2 <<- c(est)
+}
+
+
+#' submit answer to homework 6 question 7.3
+#'
+#' @param answer a character vector that is 'Yes' or 'No'
+#'
+#' @export
+#'
+#' @examples
+#' \donttest{
+#'
+#' # Question 7.3
+#' # Yes or No:
+#'
+#'
+#' # if answer is 'Yes' format answer to question 7.3 like:
+#' hw6_7.3(answer = 'Yes')
+#'
+#' # if answer is 'No' format answer to question 7.3 like:
+#' hw6_7.3(answer = 'No')
+#'
+#'
+#' }
+#'
+hw6_7.3 <- function(answer = NULL){
+  if(!is.null(answer)){
+    if(!is.character(answer)) stop(paste('answer should be a character. Your answer:', answer,'is class', class(answer)))
+    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
+    cat('Currently your answer for queston 7.3 is: ', answer)
+  }else{
+    warning("Question 7.3 has not been answered yet.\nPossible answers are 'Yes' or 'No'")
+  }
+  answer_hw6_7.3 <<- answer
+}
