@@ -10,9 +10,9 @@
 #'
 run_checks_hw6 <- function(){
   tryCatch({
-    testthat::test_that('worldA should be a data.frame or tibble that contains: y1, y0, y, income, eligable', {
+    testthat::test_that('worldA should be a data.frame or tibble that contains: y1, y0, y, income, eligible', {
       testthat::expect_true(is.data.frame(worldA))
-      testthat::expect_true(sum(c('y1','y0', 'y','income','eligable') %in% names(worldA)) == 5)
+      testthat::expect_true(sum(c('y1','y0', 'y','income','eligible') %in% names(worldA)) == 5)
     })
   },
   error = function(e) {
@@ -20,9 +20,9 @@ run_checks_hw6 <- function(){
   })
 
   tryCatch({
-    testthat::test_that('worldB should be a data.frame or tibble that contains: y1, y0, y, income, eligable', {
+    testthat::test_that('worldB should be a data.frame or tibble that contains: y1, y0, y, income, eligible', {
       testthat::expect_true(is.data.frame(worldB))
-      testthat::expect_true(sum(c('y1','y0', 'y','income','eligable') %in% names(worldB)) == 5)
+      testthat::expect_true(sum(c('y1','y0', 'y','income','eligible') %in% names(worldB)) == 5)
 
     })
   },

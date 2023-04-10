@@ -641,7 +641,7 @@ hw6_6.2 <- function(est){
   if(!is.null(est)){
     cat('Currently your answer to 6.2 is:', est)
   }else{
-    warning('Question 6.2 has not been answered yet.\nPReport an estimate to `est`')
+    warning('Question 6.2 has not been answered yet.\nReport an estimate to `est`')
   }
 
   answer_hw6_6.2 <<- c(est)
