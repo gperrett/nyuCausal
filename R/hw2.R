@@ -28,7 +28,7 @@ hw2_3.2 <- function(answer = NULL){
     warning("Question 3.2 has not been answered yet.\nPossible answers are 'A' 'B', 'C' or 'D")
   }
 
-  answer3.2 <<- answer
+  grade_env_hw2$answer_3.2 <- answer
 }
 
 #' submit answer to homework 2 question 3.3
@@ -56,7 +56,7 @@ hw2_3.3 <- function(answer = NULL){
     warning("Question 3.3 has not been answered yet.\nPossible answers are TRUE or FALSE'")
   }
 
-  answer_3.3 <<- answer
+  grade_env_hw2$answer_3.3 <- answer
 }
 
 #' @title submit answer to homework 2 question 3.4
@@ -106,7 +106,7 @@ hw2_3.4 <- function(answer = NULL){
     warning("Question 3.4 has not been answered yet.\nPossible answers are 'A' 'B' or'C'")
   }
 
-  answer_3.4 <<- answer
+  grade_env_hw2$answer_3.4 <- answer
 }
 
 
@@ -140,7 +140,7 @@ hw2_3.5 <- function(answer = NULL){
     warning("Question 3.5 has not been answered yet.\nPossible answers are 'A' 'B', 'C' or 'D'")
   }
 
-  answer3.5 <<- answer
+  grade_env_hw2$answer_3.5 <- answer
 }
 
 #' submit answer to homework 2 question 4.1 part a
@@ -181,7 +181,7 @@ hw2_4.1.a <- function(est, se){
     if(length(est) > 1) stop(paste('se should be a single number.'))
   }
 
-  answer_hw2_4.1.a <<- c(est, se)
+  grade_env_hw2$answer_4.1.a <- c(est, se)
 }
 
 #' submit answer to homework 2 question 4.1 part a
@@ -222,7 +222,7 @@ hw2_4.1.b <- function(est, se){
     if(length(est) > 1) stop(paste('se should be a single number.'))
   }
 
-  answer_hw2_4.1.b <<- c(est, se)
+  grade_env_hw2$answer_4.1.b <- c(est, se)
 }
 
 #' submit answer to homework 2 question 4.1 part c
@@ -263,7 +263,7 @@ hw2_4.1.c <- function(est, se){
     if(length(est) > 1) stop(paste('se should be a single number.'))
   }
 
-  answer_hw2_4.1.c <<- c(est, se)
+  grade_env_hw2$answer_4.1.c <- c(est, se)
 }
 
 #' submit answer to homework 2 question 4.2 part a
@@ -294,7 +294,7 @@ hw2_4.2.a <- function(answer = NULL){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
   }
-  answer_4.2.a <<- answer
+  grade_env_hw2$answer_4.2.a <- answer
 }
 
 #' submit answer to homework 2 question 4.2 part b
@@ -325,38 +325,5 @@ hw2_4.2.b <- function(answer = NULL){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
   }
-  answer_4.2.b <<- answer
+  grade_env_hw2$answer_4.1.b <- answer
 }
-
-#' submit answer to homework 2 question 4.2 part a
-#'
-#' @param answer a logical that is either TRUE or FALSE.
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#' # Question 4.2 part c
-#' # A statement that is true.
-#'
-#' # format answer to question 4.2 part c like:
-#' hw2_4.2.c(answer = TRUE)
-#'
-#' # Question 4.2 part c
-#' # A statement that is false.
-#'
-#' # format answer to question 4.2 part c like:
-#' hw2_4.2.c(answer = FALSE)
-#'
-#' }
-#'
-hw2_4.2.c <- function(answer = NULL){
-  if(!is.null(answer)){
-    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
-    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-  }
-  answer_4.2.c <<- answer
-}
-
-

@@ -31,7 +31,7 @@ hw3_1.3.a <- function(answer = NULL) {
   }else{
     cat('Question 1.3 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw3_1.3.a <<- answer
+  grade_env_hw3$answer_3_1.3.a <- answer
 }
 
 #' submit answer to homework 3 question 1.3 part b
@@ -67,43 +67,9 @@ hw3_1.3.b <- function(answer = NULL) {
     cat('Question 1.3 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
 
-  answer_hw3_1.3.b <<- answer
+  grade_env_hw3$answer_3_1.3.b <- answer
 }
 
-#' submit answer to homework 3 question 1.3 part c
-#'
-#' @param answer a logical that is TRUE or FALSE
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#' # Question 1.3 part c
-#' # TRUE or FALSE:
-#' # A statement that is true.
-#'
-#' # format answer to question 1.3 part c like:
-#' hw3_1.3.c(answer = TRUE)
-#'
-#' # Question 1.3 part c
-#' # TRUE or FALSE:
-#' # A statement that is false.
-#'
-#' # format answer to question 1.3 part c like:
-#' hw3_1.3.c(answer = FALSE)
-#'
-#' }
-hw3_1.3.c <- function(answer = NULL) {
-  if(!is.null(answer)){
-    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer),'\nSee ?hw3_1.3.c() for help'))
-    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer),'\n  For help run ?hw3_1.3.c() in R'))
-    cat('Currently your answer is:', answer)
-  }else{
-    cat('Question 1.3 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
-  }
-  answer_hw3_1.3.c <<- answer
-}
 
 #' submit answer to homework 3 question 1.4 part a
 #'
@@ -138,7 +104,7 @@ hw3_1.4.a <- function(answer = NULL) {
     cat('Question 1.4 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
 
-  answer_hw3_1.4.a <<- answer
+  grade_env_hw3$answer_3_1.4.a <- answer
 }
 
 #' submit answer to homework 3 question 1.3 part a
@@ -174,42 +140,8 @@ hw3_1.4.b <- function(answer = NULL) {
     cat('Question 1.4 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
 
-  answer_hw3_1.4.b <<- answer
-}
+  grade_env_hw3$answer_3_1.4.b <- answer
 
-#' submit answer to homework 3 question 1.3 part a
-#'
-#' @param answer a logical that is TRUE or FALSE
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#' # Question 1.4 part c
-#' # TRUE or FALSE:
-#' # A statement that is true.
-#'
-#' # format answer to question 1.4 part c like:
-#' hw3_1.4.c(answer = TRUE)
-#'
-#' # Question 1.4 part c
-#' # TRUE or FALSE:
-#' # A statement that is false.
-#'
-#' # format answer to question 1.4 part c like:
-#' hw3_1.4.c(answer = FALSE)
-#'
-#' }
-hw3_1.4.c <- function(answer = NULL) {
-  if(!is.null(answer)){
-    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer),'\nSee ?hw3_1.4.c() for help'))
-    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer),'\n  For help run ?hw3_1.4.c() in R'))
-    cat('Currently your answer is:', answer)
-  }else{
-    cat('Question 1.4 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
-  }
-  answer_hw3_1.4.c <<- answer
 }
 
 #' submit answer to homework 3 question 2.3 part a
@@ -244,7 +176,8 @@ hw3_2.3.a <- function(answer = NULL){
   }else{
     cat('Question 2.3 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw3_2.3.a <<- answer
+  grade_env_hw3$answer_3_2.3.a <- answer
+
 }
 
 #' submit answer to homework 3 question 2.3 part b
@@ -279,43 +212,10 @@ hw3_2.3.b <- function(answer = NULL){
   }else{
     cat('Question 2.3 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw3_2.3.b <<- answer
+  grade_env_hw3$answer_3_2.3.b <- answer
+
 }
 
-#' submit answer to homework 3 question 2.3 part c
-#'
-#' @param answer a logical that is TRUE or FALSE
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#' # Question 2.3 part c
-#' # TRUE or FALSE:
-#' # A statement that is true.
-#'
-#' # format answer to question 2.3 part c like:
-#' hw3_2.3.c(answer = TRUE)
-#'
-#' # Question 2.3 part c
-#' # TRUE or FALSE:
-#' # A statement that is false.
-#'
-#' # format answer to question 2.3 part c like:
-#' hw3_2.3.c(answer = FALSE)
-#'
-#' }
-hw3_2.3.c <- function(answer = NULL){
-  if(!is.null(answer)){
-    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer),'\n  For help run ?hw3_2.3.c() in R'))
-    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer),'\n  For help run ?hw3_2.3.c() in R'))
-    cat('Currently your answer is:', answer)
-  }else{
-    cat('Question 2.3 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
-  }
-  answer_hw3_2.3.c <<- answer
-}
 
 #' submit answer to homework 3 question 2.4 part a
 #'
@@ -349,7 +249,7 @@ hw3_2.4.a <- function(answer = NULL){
   }else{
     cat('Question 2.4 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw3_2.4.a <<- answer
+  grade_env_hw3$answer_3_2.4.a <- answer
 }
 
 #' submit answer to homework 3 question 2.4 part b
@@ -384,42 +284,7 @@ hw3_2.4.b <- function(answer = NULL){
   }else{
     cat('Question 2.4 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw3_2.4.b <<- answer
-}
-
-#' submit answer to homework 3 question 2.4 part c
-#'
-#' @param answer a logical that is TRUE or FALSE
-#'
-#' @export
-#'
-#' @examples
-#' \donttest{
-#'
-#' # Question 2.4 part c
-#' # TRUE or FALSE:
-#' # A statement that is true.
-#'
-#' # format answer to question 2.4 part c like:
-#' hw3_2.4.c(answer = TRUE)
-#'
-#' # Question 2.4 part c
-#' # TRUE or FALSE:
-#' # A statement that is false.
-#'
-#' # format answer to question 2.4 part c like:
-#' hw3_2.4.c(answer = FALSE)
-#'
-#' }
-hw3_2.4.c <- function(answer = NULL){
-  if(!is.null(answer)){
-    if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer),'\n  For help run ?hw3_2.4.c() in R'))
-    if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer),'\n  For help run ?hw3_2.4.c() in R'))
-    cat('Currently your answer is:', answer)
-  }else{
-    cat('Question 2.4 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
-  }
-  answer_hw3_2.4.c <<- answer
+  grade_env_hw3$answer_3_2.4.b <- answer
 }
 
 
@@ -455,7 +320,7 @@ hw3_2.5 <- function(answer = NULL){
   }else{
     cat('Question 2.5 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw3_2.5 <<- answer
+  grade_env_hw3$answer_hw3_2.5 <- answer
 }
 
 
@@ -491,7 +356,7 @@ hw3_3.2 <- function(answer = NULL){
   }else{
     cat('Question 3.2 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw3_3.2 <<- answer
+  grade_env_hw3$answer_hw3_3.2 <- answer
 }
 
 
@@ -545,7 +410,7 @@ hw3_4.1 <- function(est = NULL, se = NULL){
   if(!is.null(est) & !is.null(se)){
     cat('Currently your answer is that estimated SATE is:', est, ' with a standard error of:', se)
     }
-  answer_hw3_4.1 <<- c(est, se)
+  grade_env_hw3$answer_hw3_4.1 <- c(est, se)
 }
 
 
@@ -578,6 +443,6 @@ hw3_4.2 <- function(answer = NULL){
     warning("Question 4.2 has not been answered yet.\nPossible answers are 'A' or 'B")
   }
 
-  answer4.2 <<- answer
+  grade_env_hw3$answer_hw3_4.2 <- answer
 }
 
