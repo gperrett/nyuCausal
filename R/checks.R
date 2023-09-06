@@ -21,7 +21,7 @@ check_draw_sample <- function(){
 
 check_calculate_sate <- function(){
   testthat::test_that('calculate_sate() has arguments y1 and y0 and returns a length 1 vector', {
-    testthat::expect_true(is.vector(calculate_sate()))
+    testthat::expect_true(is.vector(calculate_sate(y1 = rnorm(250), y0 = rnorm(250))))
     testthat::expect_equal(object = sort(formalArgs(calculate_sate), decreasing = T), expected = c('y1', 'y0'))
   })
 }
@@ -46,8 +46,8 @@ check_regression <- function(){
 
 check_randomization_dist <- function(){
   testthat::test_that('check_randomization_dist() returns a vector of length 10,000', {
-    testthat::expect_true(is.vector(check_randomization_dist()))
-    testthat::expect_equal(object = length(check_randomization_dist()), 10000)
+    testthat::expect_true(is.vector(randomization_dist()))
+    testthat::expect_equal(object = length(randomization_dist()), 10000)
   })
 }
 
