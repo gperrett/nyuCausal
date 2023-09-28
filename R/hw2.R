@@ -325,5 +325,5 @@ hw2_4.2.b <- function(answer = NULL){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
   }
-  grade_env_hw2$answer_4.1.b <- answer
+  grade_env_hw2$answer_4.2.b <- answer
 }
