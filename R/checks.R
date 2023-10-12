@@ -160,7 +160,7 @@ check_correct_model <- function(){
     testthat::expect_true(any(class(correct_model) == 'lm'))
   })
 
-  grade_env_hw3$answer_2.5 <- lin_reg
+  grade_env_hw3$answer_2.5 <- correct_model
 
 
 }
