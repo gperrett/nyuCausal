@@ -31,7 +31,7 @@ hw3_1.3.a <- function(answer = NULL) {
   }else{
     cat('Question 1.3 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  grade_env_hw3$answer_3_1.3.a <- answer
+  grade_env_hw3$answer_1.3.a <- answer
 }
 
 #' submit answer to homework 3 question 1.3 part b
@@ -67,7 +67,7 @@ hw3_1.3.b <- function(answer = NULL) {
     cat('Question 1.3 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
 
-  grade_env_hw3$answer_3_1.3.b <- answer
+  grade_env_hw3$answer_1.3.b <- answer
 }
 
 
@@ -104,7 +104,7 @@ hw3_1.4.a <- function(answer = NULL) {
     cat('Question 1.4 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
 
-  grade_env_hw3$answer_3_1.4.a <- answer
+  grade_env_hw3$answer_1.4.a <- answer
 }
 
 #' submit answer to homework 3 question 1.3 part a
@@ -140,7 +140,7 @@ hw3_1.4.b <- function(answer = NULL) {
     cat('Question 1.4 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
 
-  grade_env_hw3$answer_3_1.4.b <- answer
+  grade_env_hw3$answer_1.4.b <- answer
 
 }
 
@@ -176,7 +176,7 @@ hw3_2.3.a <- function(answer = NULL){
   }else{
     cat('Question 2.3 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  grade_env_hw3$answer_3_2.3.a <- answer
+  grade_env_hw3$answer_2.3.a <- answer
 
 }
 
@@ -212,7 +212,7 @@ hw3_2.3.b <- function(answer = NULL){
   }else{
     cat('Question 2.3 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  grade_env_hw3$answer_3_2.3.b <- answer
+  grade_env_hw3$answer_2.3.b <- answer
 
 }
 
@@ -249,7 +249,7 @@ hw3_2.4.a <- function(answer = NULL){
   }else{
     cat('Question 2.4 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  grade_env_hw3$answer_3_2.4.a <- answer
+  grade_env_hw3$answer_2.4.a <- answer
 }
 
 #' submit answer to homework 3 question 2.4 part b
@@ -284,7 +284,7 @@ hw3_2.4.b <- function(answer = NULL){
   }else{
     cat('Question 2.4 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  grade_env_hw3$answer_3_2.4.b <- answer
+  grade_env_hw3$answer_2.4.b <- answer
 }
 
 
@@ -320,7 +320,7 @@ hw3_2.5 <- function(answer = NULL){
   }else{
     cat('Question 2.5 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  grade_env_hw3$answer_hw3_2.5 <- answer
+  grade_env_hw3$answer_2.5 <- answer
 }
 
 
@@ -356,7 +356,7 @@ hw3_3.2 <- function(answer = NULL){
   }else{
     cat('Question 3.2 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  grade_env_hw3$answer_hw3_3.2 <- answer
+  grade_env_hw3$answer_3.2 <- answer
 }
 
 
@@ -410,7 +410,7 @@ hw3_4.1 <- function(est = NULL, se = NULL){
   if(!is.null(est) & !is.null(se)){
     cat('Currently your answer is that estimated SATE is:', est, ' with a standard error of:', se)
     }
-  grade_env_hw3$answer_hw3_4.1 <- c(est, se)
+  grade_env_hw3$answer_4.1 <- c(est, se)
 }
 
 
@@ -443,6 +443,6 @@ hw3_4.2 <- function(answer = NULL){
     warning("Question 4.2 has not been answered yet.\nPossible answers are 'A' or 'B")
   }
 
-  grade_env_hw3$answer_hw3_4.2 <- answer
+  grade_env_hw3$answer_4.2 <- answer
 }
 
