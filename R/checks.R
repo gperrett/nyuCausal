@@ -93,7 +93,7 @@ check_lin_reg <- function(){
 #' @export
 #' @import testthat
 
-check_compare_estimators<- function(){
+check_compare_estimators <- function(){
   testthat::test_that('problem with compare_estimators() function format.\nFunction should return a data.frame or tibble with 10000 rows that has columns named est_diff and est_reg.\nSee question 3.1', {
     testthat::expect_true(is.data.frame(compare_estimators()))
     testthat::expect_true(nrow(compare_estimators()) == 10000)
@@ -109,8 +109,8 @@ check_compare_estimators<- function(){
 check_dgp1 <- function(){
 
   testthat::test_that('dgp1() returns a data.frame or tibble with variable names: p,x,z, y0, y1 and y', {
-    testthat::expect_true(is.data.frame(dgp()))
-    testthat::expect_true(all(c('p','x', 'z', 'y0', 'y1', 'y') %in% names(dgp())))
+    testthat::expect_true(is.data.frame(dgp1()))
+    testthat::expect_true(all(c('p','x', 'z', 'y0', 'y1', 'y') %in% names(dgp1())))
   })
 
   testthat::test_that('dgp1() only has a single argument `seed`', {
@@ -159,5 +159,8 @@ check_correct_model <- function(){
     testthat::expect_named(correct_model)
     testthat::expect_true(any(class(correct_model) == 'lm'))
   })
+
+  grade_env_hw3$answer_2.5 <- lin_reg
+
 
 }
