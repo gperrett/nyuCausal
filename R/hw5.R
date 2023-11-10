@@ -26,7 +26,7 @@ hw5_1.1 <- function(CACE = NULL){
     warning('Question 1.1 has not been answered yet.')
   }
 
-  answer_hw5_1.1 <<- CACE
+  grade_env_hw5$answer5_1.1 <- CACE
 }
 
 #' submit answer to homework 5 question 1.2 part a
@@ -57,7 +57,7 @@ hw5_1.2.a <- function(SATE = NULL){
     warning('Question 1.2 part a has not been answered yet.')
   }
 
-  answer_hw5_1.2.a <<- SATE
+  grade_env_hw5$answer5_1.2.a <- SATE
 }
 
 #' submit answer to homework 5 question 1.2 part a
@@ -88,7 +88,8 @@ hw5_1.2.b <- function(SATE = NULL){
     warning('Question 1.2 part b has not been answered yet.')
   }
 
-  answer_hw5_1.2.b <<- SATE
+  grade_env_hw5$answer5_1.2.b <- SATE
+
 }
 
 
@@ -125,7 +126,9 @@ hw5_1.2.c <- function(answer = NULL){
   }else{
     warning('Question 1.2 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_1.2.c <<- answer
+
+  grade_env_hw5$answer5_1.2.c <- answer
+
 }
 
 
@@ -157,7 +160,7 @@ hw5_2.2.a <- function(est = NULL){
     warning('Question 2.2 part a has not been answered yet')
   }
 
-  answer_hw5_2.2.a <<- est
+  grade_env_hw5$answer5_2.2.a <- est
 }
 
 #' submit answer to homework 5 question 2.2 part b
@@ -185,7 +188,7 @@ hw5_2.2.b <- function(est = NULL){
     warning('Question 2.2 part b has not been answered yet')
   }
 
-  answer_hw5_2.2.b <<- est
+  grade_env_hw5$answer5_2.2.b <- est
 }
 
 #' submit answer to homework 5 question 2.2 part c
@@ -213,7 +216,7 @@ hw5_2.2.c <- function(est = NULL){
     warning('Question 2.2 part c has not been answered yet')
   }
 
-  answer_hw5_2.2.c <<- est
+  grade_env_hw5$answer5_2.2.c <- est
 }
 
 #' submit answer to homework 5 question 2.2 part d
@@ -241,7 +244,7 @@ hw5_2.2.d <- function(est = NULL){
     warning('Question 2.2 part d has not been answered yet')
   }
 
-  answer_hw5_2.2.d <<- est
+  grade_env_hw5$answer5_2.2.d <- est
 }
 
 #' submit answer to homework 5 question 2.2 part e
@@ -286,7 +289,7 @@ hw5_2.2.e <- function(est = NULL, se = NULL){
   if(!is.null(est) & !is.null(se)){
     cat('Currently your answer to 2.2 part e is that estimated CACE is:', est, ' with a standard error of:', se)
   }
-  answer_hw5_2.2.e <<- est
+  grade_env_hw5$answer5_2.2.e <<- est
 }
 
 #' submit answer to homework 5 question 2.2 part f
@@ -331,7 +334,7 @@ hw5_2.2.f <- function(est = NULL, se = NULL){
   if(!is.null(est) & !is.null(se)){
     cat('Currently your answer to 2.2 part f is that estimated CACE is:', est, ' with a standard error of:', se)
   }
-  answer_hw5_2.2.f <<- est
+  grade_env_hw5$answer5_2.2.f <- est
 }
 
 #' submit answer to homework 5 question 3.1
@@ -367,7 +370,7 @@ hw5_3.1 <- function(answer = NULL){
   }else{
     warning('Question 3.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_3.1 <<- answer
+  grade_env_hw5$answer5_3.1 <- answer
 }
 
 #' submit answer to homework 5 question 3.2 part a
@@ -403,7 +406,7 @@ hw5_3.2.a <- function(answer = NULL){
   }else{
     warning('Question 3.2 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_3.2.a <<- answer
+  grade_env_hw5$answer5_3.2.a <- answer
 }
 
 #' submit answer to homework 5 question 3.2 part b
@@ -439,7 +442,7 @@ hw5_3.2.b <- function(answer = NULL){
   }else{
     warning('Question 3.2 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_3.2.b <<- answer
+  grade_env_hw5$answer5_3.2.b <- answer
 }
 
 #' submit answer to homework 5 question 3.2 part c
@@ -475,7 +478,7 @@ hw5_3.2.c <- function(answer = NULL){
   }else{
     warning('Question 3.2 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_3.2.c <<- answer
+  grade_env_hw5$answer5_3.2.c <- answer
 }
 
 #' submit answer to homework 5 question 3.2 part d
@@ -511,7 +514,7 @@ hw5_3.2.d <- function(answer = NULL){
   }else{
     warning('Question 3.2 part d has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_3.2.d <<- answer
+  grade_env_hw5$answer5_3.2.d <- answer
 }
 
 #' submit answer to homework 5 question 3.2 part e
@@ -547,7 +550,7 @@ hw5_3.2.e <- function(answer = NULL){
   }else{
     warning('Question 3.2 part e has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_3.2.e <<- answer
+  grade_env_hw5$answer5_3.2.e <- answer
 }
 
 #' submit answer to homework 5 question 4.1
@@ -592,7 +595,7 @@ hw5_4.1 <- function(est = NULL, se = NULL){
   if(!is.null(est) & !is.null(se)){
     cat('Currently your answer to 4.1 is that estimated CACE is:', est, ' with a standard error of:', se)
   }
-  answer_hw5_4.1 <<- c(est, se)
+  grade_env_hw5$answer5_4.1 <- c(est, se)
 
 }
 
@@ -629,7 +632,7 @@ hw5_4.2.a <- function(answer = NULL){
   }else{
     warning('Question 4.2 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_4.2.a <<- answer
+  grade_env_hw5$answer5_4.2.a <- answer
 }
 
 #' submit answer to homework 5 question 4.2 part b
@@ -665,7 +668,7 @@ hw5_4.2.b <- function(answer = NULL){
   }else{
     warning('Question 4.2 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_4.2.b <<- answer
+  grade_env_hw5$answer5_4.2.b <- answer
 }
 
 #' submit answer to homework 5 question 4.2 part c
@@ -701,7 +704,7 @@ hw5_4.2.c <- function(answer = NULL){
   }else{
     warning('Question 4.2 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_4.2.c <<- answer
+  grade_env_hw5$answer5_4.2.c <- answer
 }
 
 #' submit answer to homework 5 question 4.2 part d
@@ -737,5 +740,5 @@ hw5_4.2.d <- function(answer = NULL){
   }else{
     warning('Question 4.2 part d has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
-  answer_hw5_4.2.d <<- answer
+  grade_env_hw5$answer5_4.2.d <- answer
 }
