@@ -289,7 +289,7 @@ hw5_2.2.e <- function(est = NULL, se = NULL){
   if(!is.null(est) & !is.null(se)){
     cat('Currently your answer to 2.2 part e is that estimated CACE is:', est, ' with a standard error of:', se)
   }
-  grade_env_hw5$answer5_2.2.e <<- est
+  grade_env_hw5$answer5_2.2.e <- est
 }
 
 #' submit answer to homework 5 question 2.2 part f
