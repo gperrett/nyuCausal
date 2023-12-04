@@ -500,7 +500,7 @@ hw6_4.1 <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 4.1 is: ', answer)
+    cat('Currently your answer for question 4.1 is: ', answer)
   }else{
     warning('Question 4.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -537,7 +537,7 @@ hw6_5.1 <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 5.1 is: ', answer)
+    cat('Currently your answer for question 5.1 is: ', answer)
   }else{
     warning('Question 5.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -575,7 +575,7 @@ hw6_5.2 <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 5.2 is: ', answer)
+    cat('Currently your answer for question 5.2 is: ', answer)
   }else{
     warning('Question 5.2 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -614,7 +614,7 @@ hw6_6.1 <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 6.1 is: ', answer)
+    cat('Currently your answer for question 6.1 is: ', answer)
   }else{
     warning('Question 6.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -676,7 +676,7 @@ hw6_7.1 <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 7.1 is: ', answer)
+    cat('Currently your answer for question 7.1 is: ', answer)
   }else{
     warning('Question 7.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -735,7 +735,7 @@ hw6_7.3 <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.character(answer)) stop(paste('answer should be a character. Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 7.3 is: ', answer)
+    cat('Currently your answer for question 7.3 is: ', answer)
   }else{
     warning("Question 7.3 has not been answered yet.\nPossible answers are 'Yes' or 'No'")
   }

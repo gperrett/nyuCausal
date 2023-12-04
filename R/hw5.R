@@ -18,9 +18,9 @@
 #'
 hw5_1.1 <- function(CACE = NULL){
   if(!is.null(CACE)){
-    if(!is.numeric(CACE)) stop(paste('CACE should be a numeric value you have submitted a:', class(CACE)))
+    if(!is.numeric(CACE)) stop(paste('CACE should be a numeric value, you have submitted a:', class(CACE)))
     if(length(CACE) > 1) stop(paste('CACE should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(CACE)) stop(paste('CACE should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.vector(CACE)) stop(paste('CACE should be a length one vector. Do not submit a data.frame, tibble or other object'))
     cat('Currently your answer to question 1.1 is:', CACE)
   }else{
     warning('Question 1.1 has not been answered yet.')
@@ -49,9 +49,9 @@ hw5_1.1 <- function(CACE = NULL){
 #'
 hw5_1.2.a <- function(SATE = NULL){
   if(!is.null(SATE)){
-    if(!is.numeric(SATE)) stop(paste('SATE for never takers should be a numeric value you have submitted a:', class(SATE)))
+    if(!is.numeric(SATE)) stop(paste('SATE for never takers should be a numeric value, you have submitted a:', class(SATE)))
     if(length(SATE) > 1) stop(paste('SATE for never takers should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(SATE)) stop(paste('SATE for never takers should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.vector(SATE)) stop(paste('SATE for never takers should be a length one vector. Do not submit a data.frame, tibble or other object'))
     cat('Currently your answer to question 1.2 part a is:', SATE)
   }else{
     warning('Question 1.2 part a has not been answered yet.')
@@ -80,9 +80,9 @@ hw5_1.2.a <- function(SATE = NULL){
 #'
 hw5_1.2.b <- function(SATE = NULL){
   if(!is.null(SATE)){
-    if(!is.numeric(SATE)) stop(paste('SATE for never takers should be a numeric value you have submitted a:', class(SATE)))
+    if(!is.numeric(SATE)) stop(paste('SATE for never takers should be a numeric value, you have submitted a:', class(SATE)))
     if(length(SATE) > 1) stop(paste('SATE for never takers should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(SATE)) stop(paste('SATE for never takers should be length one vector do not submit a data.frame, tibble  or other object'))
+    if(!is.vector(SATE)) stop(paste('SATE for never takers should be a length one vector. Do not submit a data.frame, tibble or other object'))
     cat('Currently your answer to question 1.2 part b is:', SATE)
   }else{
     warning('Question 1.2 part b has not been answered yet.')
@@ -121,7 +121,7 @@ hw5_1.2.c <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 1.2 part c is: ', answer)
+    cat('Currently your answer for question 1.2 part c is: ', answer)
   }else{
     warning('Question 1.2 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -148,11 +148,11 @@ hw5_1.2.c <- function(answer = NULL){
 #'
 hw5_2.2.a <- function(est = NULL){
   if(!is.null(est)){
-    if(est > 1) stop('proportions can not be greater than 1')
+    if(est > 1) stop('proportions cannot be greater than 1')
     if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
     if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
-    cat('Currenlty your answer to 2.2 part a is:', est)
+    if(!is.vector(est)) stop(paste('est should be a length one vector. Do not submit a data.frame, tibble or other object'))
+    cat('Currently your answer to 2.2 part a is:', est)
   }else{
     warning('Question 2.2 part a has not been answered yet')
   }
@@ -177,10 +177,10 @@ hw5_2.2.a <- function(est = NULL){
 #'
 hw5_2.2.b <- function(est = NULL){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, you have submitted a:', class(est)))
     if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
-    cat('Currenlty your answer to 2.2 part b is:', est)
+    if(!is.vector(est)) stop(paste('est should be a length one vector. Do not submit a data.frame, tibble or other object'))
+    cat('Currently your answer to 2.2 part b is:', est)
   }else{
     warning('Question 2.2 part b has not been answered yet')
   }
@@ -205,10 +205,10 @@ hw5_2.2.b <- function(est = NULL){
 #'
 hw5_2.2.c <- function(est = NULL){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, you have submitted a:', class(est)))
     if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
-    cat('Currenlty your answer to 2.2 part c is:', est)
+    if(!is.vector(est)) stop(paste('est should be a length one vector. Do not submit a data.frame, tibble or other object'))
+    cat('Currently your answer to 2.2 part c is:', est)
   }else{
     warning('Question 2.2 part c has not been answered yet')
   }
@@ -233,10 +233,10 @@ hw5_2.2.c <- function(est = NULL){
 #'
 hw5_2.2.d <- function(est = NULL){
   if(!is.null(est)){
-    if(!is.numeric(est)) stop(paste('est should be a numeric value you have submitted a:', class(est)))
+    if(!is.numeric(est)) stop(paste('est should be a numeric value, you have submitted a:', class(est)))
     if(length(est) > 1) stop(paste('est should be a single value, it appears you have submitted an object with length > 1'))
-    if(!is.vector(est)) stop(paste('est should be length one vector do not submit a data.frame, tibble  or other object'))
-    cat('Currenlty your answer to 2.2 part d is:', est)
+    if(!is.vector(est)) stop(paste('est should be a length one vector. Do not submit a data.frame, tibble or other object'))
+    cat('Currently your answer to 2.2 part d is:', est)
   }else{
     warning('Question 2.2 part d has not been answered yet')
   }
@@ -363,7 +363,7 @@ hw5_3.1 <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 3.1 is: ', answer)
+    cat('Currently your answer for question 3.1 is: ', answer)
   }else{
     warning('Question 3.1 has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -399,7 +399,7 @@ hw5_3.2.a <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 3.2 part a is: ', answer)
+    cat('Currently your answer for question 3.2 part a is: ', answer)
   }else{
     warning('Question 3.2 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -435,7 +435,7 @@ hw5_3.2.b <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 3.2 part b is: ', answer)
+    cat('Currently your answer for question 3.2 part b is: ', answer)
   }else{
     warning('Question 3.2 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -471,7 +471,7 @@ hw5_3.2.c <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 3.2 part c is: ', answer)
+    cat('Currently your answer for question 3.2 part c is: ', answer)
   }else{
     warning('Question 3.2 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -507,7 +507,7 @@ hw5_3.2.d <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 3.2 part d is: ', answer)
+    cat('Currently your answer for question 3.2 part d is: ', answer)
   }else{
     warning('Question 3.2 part d has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -543,7 +543,7 @@ hw5_3.2.e <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 3.2 part e is: ', answer)
+    cat('Currently your answer for question 3.2 part e is: ', answer)
   }else{
     warning('Question 3.2 part e has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -625,7 +625,7 @@ hw5_4.2.a <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 4.2 part a is: ', answer)
+    cat('Currently your answer for question 4.2 part a is: ', answer)
   }else{
     warning('Question 4.2 part a has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -661,7 +661,7 @@ hw5_4.2.b <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 4.2 part b is: ', answer)
+    cat('Currently your answer for question 4.2 part b is: ', answer)
   }else{
     warning('Question 4.2 part b has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -697,7 +697,7 @@ hw5_4.2.c <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 4.2 part c is: ', answer)
+    cat('Currently your answer for question 4.2 part c is: ', answer)
   }else{
     warning('Question 4.2 part c has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
@@ -733,7 +733,7 @@ hw5_4.2.d <- function(answer = NULL){
   if(!is.null(answer)){
     if(!is.logical(answer)) stop(paste('answer should be a logical (TRUE or FALSE). Your answer:', answer,'is class', class(answer)))
     if(length(answer) > 1) stop(paste('answer must have a length of 1, but your answer has length', length(answer)))
-    cat('Currently your answer for queston 4.2 part d is: ', answer)
+    cat('Currently your answer for question 4.2 part d is: ', answer)
   }else{
     warning('Question 4.2 part d has not been answered yet.\nPossible answers are TRUE or FALSE')
   }
