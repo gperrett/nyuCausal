@@ -24,14 +24,14 @@ hw1_1.1 <- function(answer = c(NULL, 'A', 'B', 'C')){
     if (answer %notin% c('A', 'B', 'C'))
       stop(
         paste0(
-          "Acceptibele answers are: 'A', 'B' or 'C'.\n  You submitted '",
+          "Acceptable answers are: 'A', 'B' or 'C'.\n  You submitted '",
           answer,
           "' which is not an option.\n  Please correct prior to submitting."
         )
       )
     if (!is.character(answer))
       stop(paste(
-        'answer should be a character/string your answer is a',
+        'answer should be a character/string. Your answer is a',
         class(answer)
       ))
     if (length(answer) > 1)
@@ -72,8 +72,8 @@ hw1_1.2.a <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
     warning('You have not answered question 1.1')
   }
   if(!is.null(answer)){
-    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
-    if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
+    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptable answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+    if(!is.character(answer)) stop(paste('answer should be a character/string, your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
   }
@@ -108,8 +108,8 @@ hw1_1.2.b <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
     warning('You have not answered question 1.1')
   }
   if(!is.null(answer)){
-    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
-    if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
+    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptable answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+    if(!is.character(answer)) stop(paste('answer should be a character/string, your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
   }
@@ -143,8 +143,8 @@ hw1_1.2.c <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
     warning('You have not answered question 1.1')
   }
   if(!is.null(answer)){
-    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
-    if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
+    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptable answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+    if(!is.character(answer)) stop(paste('answer should be a character/string, your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
   }
@@ -293,8 +293,8 @@ hw1_2.2 <- function(answer = c(NULL, 'A', 'B', 'C', 'D')){
     warning('You have not answered question 1.1')
   }
   if(!is.null(answer)){
-    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptibele answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
-    if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
+    if(answer %notin% c('A', 'B', 'C', 'D')) stop(paste0("Acceptable answers are: 'A', 'B', 'C' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+    if(!is.character(answer)) stop(paste('answer should be a character/string, your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
 
@@ -327,8 +327,8 @@ hw1_2.3 <- function(answer = c(NULL, 'A', 'B', 'C')){
     warning('You have not answered question 1.1')
   }
   if(!is.null(answer)){
-    if(answer %notin% c('A', 'B', 'C')) stop(paste0("Acceptibele answers are: 'A', 'B' or 'D'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
-    if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
+    if(answer %notin% c('A', 'B', 'C')) stop(paste0("Acceptable answers are: 'A', 'B' or 'C'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+    if(!is.character(answer)) stop(paste('answer should be a character/string, your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
   }
@@ -360,8 +360,8 @@ hw1_2.4 <- function(answer = c(NULL, 'A', 'B', 'C')){
     answer <- NULL
     warning('You have not answered question 1.1')
   }
-  if(answer %notin% c('A', 'B', 'C')) stop(paste0("Acceptibele answers are: 'A', 'B' or 'C'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
-  if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
+  if(answer %notin% c('A', 'B', 'C')) stop(paste0("Acceptable answers are: 'A', 'B' or 'C'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+  if(!is.character(answer)) stop(paste('answer should be a character/string, your answer is a', class(answer)))
   if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
   if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
 

@@ -32,7 +32,7 @@ check_calculate_sate <- function(){
 #' @import testthat
 
 check_regression <- function(){
-  testthat::test_that('reg object exists in global enviornment', {
+  testthat::test_that('reg object exists in global environment', {
     testthat::expect_named(reg)
   })
 
@@ -155,7 +155,7 @@ check_dgp3 <- function(){
 #' @import testthat
 check_correct_model <- function(){
 
-  testthat::test_that('correct_model exists in global enviornment', {
+  testthat::test_that('correct_model exists in global environment', {
     testthat::expect_named(correct_model)
     testthat::expect_true(any(class(correct_model) == 'lm'))
   })

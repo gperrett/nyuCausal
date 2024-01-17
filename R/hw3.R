@@ -434,13 +434,13 @@ hw3_4.1 <- function(est = NULL, se = NULL){
 #' }
 hw3_4.2 <- function(answer = NULL){
   if(!is.null(answer)){
-    if(answer %notin% c('A', 'B')) stop(paste0("Acceptibele answers are: 'A' or 'B'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
+    if(answer %notin% c('A', 'B')) stop(paste0("Acceptable answers are: 'A' or 'B'.\n  You submitted '", answer, "' which is not an option.\n  Please correct prior to submitting."))
     if(!is.character(answer)) stop(paste('answer should be a character/string your answer is a', class(answer)))
     if(length(answer) > 1) stop(paste("answer should only have a length of 1, your answer has a length of:", length(answer)))
     if(nchar(answer) > 1) stop('answer should be a single letter, your submission has more than one character')
-    cat('Currenly, your answer for question 4.2 is:', answer)
+    cat('Currently, your answer for question 4.2 is:', answer)
   }else{
-    warning("Question 4.2 has not been answered yet.\nPossible answers are 'A' or 'B")
+    warning("Question 4.2 has not been answered yet.\nPossible answers are 'A' or 'B'")
   }
 
   grade_env_hw3$answer_4.2 <- answer
